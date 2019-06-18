@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from './redux/actions';
-import { Card, CardTitle, CardText, Slider, Media } from 'react-md';
+import { Card, CardTitle, CardText, Media } from 'react-md';
 
 
 export class DefaultPage extends Component {
@@ -30,7 +30,7 @@ export class DefaultPage extends Component {
                 <Media>
                   <img src={"http://image.tmdb.org/t/p/w185"+item.poster_path} alt="Nature from lorempixel" />
                 </Media>
-              <CardTitle title={item.title} subtitle="With CardText" />
+              <CardTitle title={item.title} subtitle={'Date de sortie : ' + item.release_date} />
               <CardText>
                 <p>
                   {item.overview}
